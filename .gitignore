@@ -1,0 +1,32 @@
+# Ambiente virtual
+venv/
+.env/
+*.env
+
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Banco de dados SQLite (se usado)
+db.sqlite3
+
+# Arquivos temporários
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+*.orig
+
+# Diretórios do Django
+/staticfiles/
+/media/
+
+# Arquivos do VSCode (opcional)
+.vscode/
+
+# Migrations (opcional, se quiser ignorar migrações)
+# **/migrations/
+# !**/migrations/__init__.py
