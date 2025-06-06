@@ -1,0 +1,9 @@
+{% extends 'estoque/base.html' %}
+{% block content %}
+<p>Tem certeza que deseja excluir "{{ ativo }}"?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Sim, excluir</button>
+</form>
+<a href="{% url 'ativo_list' %}">Cancelar</a>
+{% endblock %}
