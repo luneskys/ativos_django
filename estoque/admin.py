@@ -3,6 +3,7 @@ from .models import Ativo
 
 @admin.register(Ativo)
 class AtivoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'numero_patrimonio', 'categoria', 'status', 'localizacao')
-    search_fields = ('nome', 'numero_patrimonio', 'categoria')
-    list_filter = ('status', 'categoria')
+    list_display = ('tipo', 'nome', 'numero_patrimonio', 'status')
+    search_fields = ('tipo', 'nome', 'numero_patrimonio', 'serial_number')
+    list_filter = ('status',)
+

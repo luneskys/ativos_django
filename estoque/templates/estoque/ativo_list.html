@@ -3,12 +3,25 @@
 <a href="{% url 'ativo_create' %}">Adicionar Ativo</a>
 <table border="1">
   <tr>
-    <th>Nome</th><th>Patrimônio</th><th>Status</th><th>Ações</th>
+    <th>Tipo</th>
+    <th>Nome</th>
+    <th>Patrimônio</th>
+    <th>Serial</th>
+    <th>RAM</th>
+    <th>HD</th>
+    <th>Processador</th>
+    <th>Status</th>
+    <th>Ações</th>
   </tr>
   {% for ativo in ativos %}
   <tr>
+    <td>{{ ativo.tipo }}</td>
     <td>{{ ativo.nome }}</td>
     <td>{{ ativo.numero_patrimonio }}</td>
+    <td>{{ ativo.serial_number }}</td>
+    <td>{{ ativo.ram }}</td>
+    <td>{{ ativo.hd }}</td>
+    <td>{{ ativo.processador }}</td>
     <td>{{ ativo.status }}</td>
     <td>
       <a href="{% url 'ativo_update' ativo.pk %}">Editar</a> |
